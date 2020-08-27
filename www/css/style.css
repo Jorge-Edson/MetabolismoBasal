@@ -1,0 +1,37 @@
+body
+{
+  background: linear-gradient(to right, #ffec80, #fff4b3);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#Header
+{
+  background:linear-gradient(black, #333333);
+  color: gold;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#Form
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background:linear-gradient(black, #333333);
+  color: gold;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#Calcular
+{
+  border-radius: 10px;
+}
