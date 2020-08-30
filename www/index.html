@@ -27,7 +27,9 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-outline-warning btn-sm"><a href="help.html">Ajuda</a></button>
+        <button class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#ajudaModal">
+            Ajuda
+          </button>
       </div>
     </div>
   </div>
@@ -40,12 +42,12 @@
         <div class="form-group">
           <label for="Atividade">Taxa de Atividade:</label>
           <select class="form-control form-control-sm" id="Atividade">
-            <option value="1" selected disabled>Selecione...</option>
-            <option value="2">Sedentário</option>
-            <option value="3">Levemente ativo</option>
-            <option value="4">Moderadamente ativo</option>
-            <option value="5">Altamente ativo</option>
-            <option value="6">Extremamente ativo</option>
+            <option value="0" selected disabled>Selecione...</option>
+            <option value="1.2">Sedentário</option>
+            <option value="1.375">Levemente ativo</option>
+            <option value="1.55">Moderadamente ativo</option>
+            <option value="1.725">Altamente ativo</option>
+            <option value="1.9">Extremamente ativo</option>
           </select>
         </div>
       </div>
@@ -77,7 +79,7 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="form-group">
-          <label for="Sexo">Sexo</label>
+          <label for="Sexo">Sexo:</label>
           <select class="form-control form-control-sm" id="Sexo">
             <option value="1" selected disabled>Selecione...</option>
             <option value="2">Masculino</option>
@@ -89,15 +91,61 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="form-group">
-          <button class="btn btn-outline-warning btn-block" id="Calcular">Calcular</button>
+          <button id="Calcular" class="btn btn-outline-warning btn-block" data-toggle="modal" data-target="#resultadoModal">
+            Calcular
+          </button>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
+  </div>
+</div>
+
+<!-- Modal Resultado -->
+<div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="resultadoModalContent">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultadoModalTitle">Resultado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
         <div class="form-group">
-          <input type="text" class="form-control form-control-sm" id="Resultado" readonly>
+          <label for="Resultado">Gasto Basal:</label>
+          <input type="text" class="form-control form-control" id="Resultado" readonly>
+          <br>
+          <label for="MetabolismoBasal">Taxa de Metabolismo Basal:</label>
+          <input type="text" class="form-control form-control" id="MetabolismoBasal" readonly>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ajuda -->
+<div class="modal fade" id="ajudaModal" tabindex="-1" role="dialog" aria-labelledby="ajudaModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="ajudaModalContent">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ajudaModalTitle">Ajuda</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Taxa de atividade:</h5> 
+        <p>1. Sedentários: Pouco ou nenhum exercício;</p>
+        <p>2. Levemente ativo: Exercício leve 1 a 3 dias por semana;</p>
+        <p>3. Moderadamente ativo: Exercício moderado, pratica esportes de 3 a 5 dias por semana;</p>
+        <p>4. Altamente ativo: Exercício pesado de 5 a 6 dias por semana;</p>
+        <p>5. Extremamente ativo: Exercício pesado diariamente e até 2 vezes por dia.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
